@@ -6,7 +6,7 @@ def main(argv):
         '-': sub,
         '*': mul,
         '/': div,
-          }
+    }
     if argc != 4:
         print('Usage: {:s} <a> <operator> <b>'.format(argv[0]))
         exit(1)
@@ -19,7 +19,7 @@ def main(argv):
     res = ops[op](a, b)
     print('{:d} {:s} {:d} = {:d}'.format(a, op, b, res))
 
-    if __name__ == '__main__':
+if __name__ == '__main__':
     from sys import argv, exit
     from calculator_1 import add, sub, mul, div
     main(argv)
