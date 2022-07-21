@@ -1,11 +1,7 @@
 #!/usr/bin/python3
-i = 122
-while i >= 97:
-flag = 0
-if i % 2 != 0:
-i = i - 32
-flag = 1
-print("{:s}".format(chr(i)), end="")
-if flag == 1:
-i = i + 32
-i = i - 1
+for i in range(-122, -96):
+    if i % 2 == 0:
+        let = chr(i * -1)
+    else:
+        let = chr((i * -1) - 32)
+    print("{}".format(let), end="")
