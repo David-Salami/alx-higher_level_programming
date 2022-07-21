@@ -8,4 +8,3 @@ if __name__ == "__main__":
         argsum += int(sys.argv[i])
         i += 1
     print(argsum)
-    
