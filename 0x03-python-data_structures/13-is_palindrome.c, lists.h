@@ -3,41 +3,41 @@
 
 int is_palindrome(listint_t **head)
 {
-listint_t *nhead, *tort, *hare, *ptort;
-listint_t *cut = NULL, *half, *it1, *it2;
+  listint_t *nhead, *tort, *hare, *ptort;
+  listint_t *cut = NULL, *half, *it1, *it2;
 
-if (!head || !*head)
-return (1);
+  if (!head || !*head)
+    return (1);
 
-nhead = *head;
-if (nhead->next != NULL)
-{
-for (hare = nhead, tort = nhead; hare != NULL && hare->next != NULL;
-ptort = tort, tort = tort->next)
-hare = hare->next->next;
-if (hare != NULL)
-{
-cut = tort;
-tort = tort->next;
-}
-ptort->next = NULL;
-half = tort;
-it1 = reverse_listint(&half);
-for (it2 = *head; it2; it1 = it1->next, it2 = it2->next)
-{
-if (it2->n != it1->n)
-return (0);
-}
-if (cut == NULL)
-ptort->next = half;
-else
-{
-ptort->next = cut;
-cut->next = half;
-}
-}
+  nhead = *head;
+  if (nhead->next != NULL)
+    {
+      for (hare = nhead, tort = nhead; hare != NULL && hare->next != NULL;
+	   ptort = tort, tort = tort->next)
+	hare = hare->next->next;
+      if (hare != NULL)
+	{
+	  cut = tort;
+	  tort = tort->next;
+	}
+      ptort->next = NULL;
+      half = tort;
+      it1 = reverse_listint(&half);
+      for (it2 = *head; it2; it1 = it1->next, it2 = it2->next)
+	{
+	  if (it2->n != it1->n)
+	    return (0);
+	}
+      if (cut == NULL)
+	ptort->next = half;
+      else
+	{
+	  ptort->next = cut;
+	  cut->next = half;
+	}
+    }
 
-return (1);
+  return (1);
 }
 
 /**
@@ -48,23 +48,23 @@ return (1);
  */
 listint_t *reverse_listint(listint_t **head)
 {
-listint_t *next = NULL, *prev = NULL;
+  listint_t *next = NULL, *prev = NULL;
 
-if (!head || !*head)
-return (NULL);
+  if (!head || !*head)
+    return (NULL);
 
-while ((*head)->next)
-{
-next = (*head)->next;
+  while ((*head)->next)
+    {
+      next = (*head)->next;
 
-(*head)->next = prev;
+      (*head)->next = prev;
 
-prev = *head;
+      prev = *head;
 
-*head = next;
-}
+      *head = next;
+    }
 
-(*head)->next = prev;
+  (*head)->next = prev;
 
-return (*head);
+  return (*head);
 }
