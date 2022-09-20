@@ -1,12 +1,17 @@
 SQL is a language to operate databases; it includes database creation, deletion, fetching rows, modifying rows, etc. SQL is an ANSI (American National Standards Institute) standard language, but there are many different versions of the SQL language.
 
-What is SQL? SQL is Structured Query Language, which is a computer language for storing, manipulating and retrieving data stored in a relational database.
+What is SQL?
+SQL is Structured Query Language, which is a computer language for storing, manipulating and retrieving data stored in a relational database.
 
 SQL is the standard language for Relational Database System. All the Relational Database Management Systems (RDMS) like MySQL, MS Access, Oracle, Sybase, Informix, Postgres and SQL Server use SQL as their standard database language.
 
 Also, they are using different dialects, such as −
 
-MS SQL Server using T-SQL, Oracle using PL/SQL, MS Access version of SQL is called JET SQL (native format) etc. Why SQL? SQL is widely popular because it offers the following advantages −
+MS SQL Server using T-SQL,
+Oracle using PL/SQL,
+MS Access version of SQL is called JET SQL (native format) etc.
+Why SQL?
+SQL is widely popular because it offers the following advantages −
 
 Allows users to access data in the relational database management systems.
 
